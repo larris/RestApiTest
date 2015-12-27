@@ -22,7 +22,7 @@ router.route('/users')
         res.json({message: 'User created!'});
       });
     })
-    .get(function (req, res) { //get the users
+    .get(function (req, res) { //get the user
         User.find(function (err, users) {
         if (err)
           res.send(err);
