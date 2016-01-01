@@ -19,7 +19,7 @@ router.route('/users')
             if (err)
                 res.send(err);
 
-            res.json({message: 'User created!'});
+            res.json({ message: 'User created!' });
         });
     })
     .get(function (req, res) { //get the user
@@ -28,6 +28,15 @@ router.route('/users')
                 res.send(err);
 
             res.json(users);
+        });
+    });
+ router.route('/users/:user_name')
+    .get(function(req,res){
+        User.find({ "username": req.params.user_name },function(err,user){
+            if (err)
+                res.send(err);
+ 
+       res.json(user);      
         });
     });
 
