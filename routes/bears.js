@@ -44,7 +44,6 @@ router.route('/bears/:bear_id') //get one bear
     .put(function(req, res) {
         // use our bear model to find the bear we want
         Bear.findById(req.params.bear_id, function(err, bear) {
-
             if (err)
                 res.send(err);
 
