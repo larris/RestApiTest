@@ -42,7 +42,7 @@ router.route('/users/:user_name')
             if (user.length > 0)
                 res.json(user);
             else
-            console.log('no user soecified');
+            console.log('no user soecified!!!');
                 res.json({   
                     message: 'no user found please try again!!!!'
                 });
