@@ -43,8 +43,7 @@ router.route('/users/:user_name')
                 res.json(user);
             else
             console.log('no user soecified');
-                res.json({
-                    
+                res.json({   
                     message: 'no user found'
                 });
         });
